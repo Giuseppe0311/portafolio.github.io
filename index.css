@@ -259,7 +259,7 @@ nav ul li:first-child:hover a {
     font-size: 20pt;
   }
   .portada .miinformacion .presentacion .txt2 {
-    font-size: 8pt;
+    font-size: 15pt;
   }
   .portada .miinformacion .presentacion {
     margin-left: 10px;
@@ -278,11 +278,12 @@ nav ul li:first-child:hover a {
     margin-top: 50px;
     /* padding-left: 10px; */
     padding: 0 0px 0px 2px;
-    gap: 3px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .portada .botones a {
     padding: 5px;
-    font-size: 6pt;
+    font-size: 10pt;
     text-align: center;
   }
   .portada .imagenfondo img {
@@ -313,10 +314,10 @@ nav ul li:first-child:hover a {
   }
   .portada .miinformacion .presentacion .txt1,
   .txt3 {
-    font-size: 28pt;
+    font-size: 30pt;
   }
   .portada .miinformacion .presentacion .txt2 {
-    font-size: 14pt;
+    font-size: 19pt;
   }
   .portada .miinformacion .presentacion {
     margin-left: 10px;
@@ -339,7 +340,7 @@ nav ul li:first-child:hover a {
   }
   .portada .botones a {
     padding: 5px;
-    font-size: 8pt;
+    font-size: 13pt;
     text-align: center;
   }
   .portada .imagenfondo img {
@@ -371,10 +372,10 @@ nav ul li:first-child:hover a {
   }
   .portada .miinformacion .presentacion .txt1,
   .txt3 {
-    font-size: 30pt;
+    font-size: 37pt;
   }
   .portada .miinformacion .presentacion .txt2 {
-    font-size: 15pt;
+    font-size: 18pt;
   }
   .portada .miinformacion .presentacion {
     margin-left: 10px;
@@ -397,7 +398,7 @@ nav ul li:first-child:hover a {
   }
   .portada .botones a {
     padding: 5px;
-    font-size: 12pt;
+    font-size: 15pt;
     text-align: center;
   }
   .portada .imagenfondo img {
