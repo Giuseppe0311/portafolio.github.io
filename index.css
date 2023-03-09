@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+/* variables */
+:root {
+  --skills-bar-length: 0%;
+}
+/* RECREACION DEL HEADER */
+header {
+  height: 10vh;
+}
+.container__menu {
+  width: 100%;
+  height: 70px;
+  background-color: #08aaff;
+  padding: 0px 20px;
+}
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+nav {
+  height: 100%;
+}
+nav ul {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+nav ul li {
+  height: 100%;
+  list-style: none;
+  position: relative;
+}
+nav ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  transform: scale(1.1);
+  background: #0074c7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+nav ul li:first-child a {
+  background-image: url(home.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 40px;
+}
+nav ul li:first-child:hover a {
+  background-image: url(home.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 40px;
+}
+#selected {
+  transform: scale(1.1);
+  background-color: rgb(17, 116, 147);
+  border: 1px solid none;
+  border-radius: 10px;
+}
+/*  */
+/* ELEMENTOS RESPONSIVOS */
+.icon__menu {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+#check__menu {
+  display: none;
+}
+#label__check {
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+
+/* MEDIA QUERIES NAV*/
+@media (max-width: 720px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #023877;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav ul li a:hover {
+    transform: scale(1);
+  }
+  nav ul li:first-child a {
+    background-position: 20px;
+  }
+  #selected {
+    transform: scale(1);
+    border-radius: 0;
+  }
+  #label__check {
+    display: block;
+  }
+  .icon__menu {
+    display: flex;
+  }
+  #check__menu:checked ~ nav ul {
+    height: 400px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.portada {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  overflow: hidden;
+}
+/* TRABAJANDO CON MI INFORMACION */
+.portada .miinformacion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  width: 50%;
+}
+/* TRABAJANDO CON EL TEXTO */
+.portada .miinformacion .presentacion {
+  margin-left: 30px;
+  padding: 0px 0px 15px 50px;
+}
+.portada .miinformacion .presentacion .txt1,
+.txt3 {
+  color: red;
+  font-size: 40pt;
+}
+.portada .miinformacion .presentacion .txt2 {
+  color: red;
+  font-size: 20pt;
+  padding-top: 5px;
+}
+/* EFECTO MAQUINA DE ESCRIBIR */
+.portada .presentacion .txt3 {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 9ch;
+  animation: typing 1.4s steps(9) infinite,
+    blink 0.3s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* IMAGENES DE LAS TECNOLOGIAS */
+.portada .logos_tecnologias {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0px 0px 15px 50px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.portada .logos_tecnologias img {
+  height: 60px;
+  margin: 0 10px 0 0;
+}
+.portada .botones {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 70px 15px 80px;
+}
+.portada .botones a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  border: 1px solid none;
+  background-color: #08aaff;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.portada .botones .btn1:hover {
+  transform: scale(1.2);
+  box-shadow: inset -4.3em 0 0 0 rgba(63, 94, 251, 1),
+    inset 4.4em 0 0 0 rgba(252, 70, 107, 1);
+}
+.portada .botones .btn2:hover {
+  transform: scale(1.2);
+  box-shadow: inset -6em 0 0 0 rgba(63, 94, 251, 1),
+    inset 5.8em 0 0 0 rgba(252, 70, 107, 1);
+}
+/* AQUI VA LA IMAGEN */
+.portada .imagenfondo {
+  width: 50%;
+  height: 90vh;
+  margin-right: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portada .imagenfondo img {
+  padding-top: 10px;
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+
+/* MEDIA QUERIES PORTADA */
+/* CONFIGURANDO GRID RESPONSIVE */
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .portada .logos_tecnologias {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .portada .miinformacion .presentacion .txt1,
+  .txt3 {
+    font-size: 20pt;
+  }
+  .portada .miinformacion .presentacion .txt2 {
+    font-size: 8pt;
+  }
+  .portada .miinformacion .presentacion {
+    margin-left: 10px;
+    padding: 0px 0px 15px 10px;
+  }
+  .portada .logos_tecnologias {
+    padding: 0px 0px 0px 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .portada .logos_tecnologias img {
+    height: 40px;
+    margin: 0 5px 0 0;
+  }
+  .portada .botones {
+    margin-top: 50px;
+    /* padding-left: 10px; */
+    padding: 0 0px 0px 2px;
+    gap: 3px;
+  }
+  .portada .botones a {
+    padding: 5px;
+    font-size: 6pt;
+    text-align: center;
+  }
+  .portada .imagenfondo img {
+    width: 100%;
+    height: 60vh;
+  }
+  .portada .botones .btn1:hover {
+    transform: scale(1);
+  }
+  .portada .botones .btn2:hover {
+    transform: scale(1);
+  }
+  /* ARREGLANDO EL EFECTO MAQUINA DE ESCRIBRI */
+  .portada .presentacion .txt3 {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 10ch;
+    animation: typing 1.4s steps(8) infinite, blink 0.3s step-end alternate;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 540px) {
+  .portada .logos_tecnologias {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .portada .miinformacion .presentacion .txt1,
+  .txt3 {
+    font-size: 28pt;
+  }
+  .portada .miinformacion .presentacion .txt2 {
+    font-size: 14pt;
+  }
+  .portada .miinformacion .presentacion {
+    margin-left: 10px;
+    padding: 0px 0px 15px 10px;
+  }
+  .portada .logos_tecnologias {
+    padding: 0px 0px 0px 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .portada .logos_tecnologias img {
+    height: 40px;
+    margin: 0 5px 0 0;
+  }
+  .portada .botones {
+    margin-top: 50px;
+    /* padding-left: 10px; */
+    padding: 0 0px 0px 2px;
+    gap: 3px;
+  }
+  .portada .botones a {
+    padding: 5px;
+    font-size: 8pt;
+    text-align: center;
+  }
+  .portada .imagenfondo img {
+    width: 100%;
+    height: 70vh;
+  }
+  .portada .botones .btn1:hover {
+    transform: scale(1);
+  }
+  .portada .botones .btn2:hover {
+    transform: scale(1);
+  }
+  /* ARREGLANDO EL EFECTO MAQUINA DE ESCRIBRI */
+  .portada .presentacion .txt3 {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 10ch;
+    animation: typing 1.4s steps(8) infinite, blink 0.3s step-end alternate;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 540px) and (max-width: 720px) {
+  .portada .logos_tecnologias {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .portada .miinformacion .presentacion .txt1,
+  .txt3 {
+    font-size: 30pt;
+  }
+  .portada .miinformacion .presentacion .txt2 {
+    font-size: 15pt;
+  }
+  .portada .miinformacion .presentacion {
+    margin-left: 10px;
+    padding: 0px 0px 15px 10px;
+  }
+  .portada .logos_tecnologias {
+    padding: 0px 0px 0px 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .portada .logos_tecnologias img {
+    height: 40px;
+    margin: 0 5px 0 0;
+  }
+  .portada .botones {
+    margin-top: 50px;
+    /* padding-left: 10px; */
+    padding: 0 0px 0px 2px;
+    gap: 3px;
+  }
+  .portada .botones a {
+    padding: 5px;
+    font-size: 12pt;
+    text-align: center;
+  }
+  .portada .imagenfondo img {
+    width: 100%;
+    height: 70vh;
+  }
+  .portada .botones .btn1:hover {
+    transform: scale(1);
+  }
+  .portada .botones .btn2:hover {
+    transform: scale(1);
+  }
+  /* ARREGLANDO EL EFECTO MAQUINA DE ESCRIBRI */
+  .portada .presentacion .txt3 {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 10ch;
+    animation: typing 1.4s steps(8) infinite, blink 0.3s step-end alternate;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 1050px) {
+  nav ul {
+    justify-content: center;
+  }
+  .portada .logos_tecnologias {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  .portada .miinformacion .presentacion .txt1,
+  .txt3 {
+    font-size: 40pt;
+  }
+  .portada .miinformacion .presentacion .txt2 {
+    font-size: 20pt;
+  }
+  .portada .miinformacion .presentacion {
+    margin-left: 0px;
+    padding: 0px 0px 15px 50px;
+  }
+  .portada .logos_tecnologias {
+    padding: 0px 0px 0px 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .portada .logos_tecnologias img {
+    height: 40px;
+    margin: 0 5px 0 0;
+  }
+  .portada .botones {
+    margin-top: 50px;
+    /* padding-left: 10px; */
+    padding: 0 0px 0px 2px;
+    gap: 3px;
+  }
+  .portada .botones a {
+    padding: 5px;
+    font-size: 15pt;
+    text-align: center;
+  }
+  .portada .imagenfondo img {
+    width: 100%;
+    height: 90vh;
+  }
+  .portada .botones .btn1:hover {
+    transform: scale(1);
+  }
+  .portada .botones .btn2:hover {
+    transform: scale(1);
+  }
+  /* ARREGLANDO EL EFECTO MAQUINA DE ESCRIBRI */
+  .portada .presentacion .txt3 {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 10ch;
+    animation: typing 1.4s steps(8) infinite, blink 0.3s step-end alternate;
+    overflow: hidden;
+  }
+}
