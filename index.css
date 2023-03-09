@@ -245,6 +245,103 @@ nav ul li:first-child:hover a {
   height: 100%;
   z-index: 2;
 }
+/* CONFIGURACION ACERCA MIO */
+.sobremi {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.acercamio {
+  width: 60%;
+  display: flex;
+  margin-right: 60px;
+  flex-direction: row;
+  gap: 50px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  height: 450px;
+  /* backdrop-filter: blur(5px); */
+  /* -webkit-backdrop-filter: blur(5px); */
+  /* letter-spacing: 1px;
+  line-height: 35px;
+  font-size: 15pt;
+  transition: all 300ms; */
+}
+.sobremi .acercamio:hover {
+  transform: translateY(5px);
+}
+.acercamio h2 {
+  color: red;
+  font-size: 25pt;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.presentacionn {
+  position: relative;
+  max-width: 50%;
+  text-align: justify;
+}
+
+/* .presentacionn p,
+.aptitudes li {
+  font-size: 18pt;
+  transition: all 300ms;
+  line-height: 35px;
+} */
+
+.presentacionn h2 {
+  padding: 5px 0 20px 5px;
+}
+.aptitudes {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aptitudes h2 {
+  padding: 5px 0 5px 5px;
+}
+
+.aptitudes li {
+  padding: 15px 0 0 0;
+  list-style-image: url(icons8-marca-de-verificación-12.png);
+}
+
+.fotologo {
+  position: relative;
+  width: 40%;
+}
+.fotologo img {
+  height: auto;
+  max-width: 100%;
+  animation: movimiento 2.5s linear infinite;
+}
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* AJUSTANDO LA IMAGEN */
+.lenguaje img {
+  width: 50px;
+  height: 50px;
+}
 
 /* MEDIA QUERIES PORTADA */
 /* CONFIGURANDO GRID RESPONSIVE */
@@ -340,7 +437,7 @@ nav ul li:first-child:hover a {
   }
   .portada .botones a {
     padding: 5px;
-    font-size: 13pt;
+    font-size: 12pt;
     text-align: center;
   }
   .portada .imagenfondo img {
@@ -480,5 +577,130 @@ nav ul li:first-child:hover a {
     width: 10ch;
     animation: typing 1.4s steps(8) infinite, blink 0.3s step-end alternate;
     overflow: hidden;
+  }
+}
+/* MEDIA QUERES PARA SOBRE MI */
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .sobremi {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .presentacionn img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .presentacionn p {
+    font-size: 8pt;
+    letter-spacing: 0px;
+    line-height: 25px;
+  }
+  .presentacionn h2,
+  .aptitudes h2 {
+    font-size: 10pt;
+  }
+  .acercamio {
+    min-width: 90%;
+    margin-right: 5px;
+    height: 350px;
+    /* font-size: 13pt; */
+  }
+  .aptitudes li {
+    font-size: 8pt;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 720px) {
+  .sobremi {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .presentacionn img {
+    width: 30px;
+    height: 30px;
+  }
+  .presentacionn p {
+    font-size: 11pt;
+    letter-spacing: 0px;
+    line-height: 25px;
+  }
+  .presentacionn h2,
+  .aptitudes h2 {
+    font-size: 20pt;
+  }
+  .acercamio {
+    min-width: 90%;
+    margin-right: 5px;
+    height: 350px;
+    /* font-size: 13pt; */
+  }
+  .aptitudes li {
+    font-size: 11pt;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 1324px) {
+  .sobremi {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .presentacionn img {
+    width: 30px;
+    height: 30px;
+  }
+  .presentacionn p,
+  .aptitudes li {
+    font-size: 10pt;
+    transition: all 300ms;
+    line-height: 30px;
+  }
+
+  .presentacionn h2,
+  .aptitudes h2 {
+    font-size: 20pt;
+  }
+  .acercamio {
+    min-width: 40%;
+    margin-right: 30px;
+    height: 450px;
+    /* font-family: "Times New Roman", Times, serif; */
+    /* letter-spacing: 2px; */
+    /* line-height: 5px; */
+    /* font-size: 13pt; */
+  }
+}
+
+@media only screen and (min-width: 1324px) {
+  .sobremi {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .presentacionn img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .presentacionn p,
+  .aptitudes li {
+    font-size: 17pt;
+    transition: all 300ms;
+    line-height: 35px;
+  }
+
+  .presentacionn h2,
+  .aptitudes h2 {
+    font-size: 20pt;
+  }
+  .acercamio {
+    min-width: 40%;
+    margin-right: 30px;
+    height: 450px;
+    /* font-family: "Times New Roman", Times, serif; */
+    /* letter-spacing: 2px; */
+    /* line-height: 5px; */
+    /* font-size: 13pt; */
   }
 }
