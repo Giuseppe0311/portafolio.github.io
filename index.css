@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --skills-bar-length: 0%;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -343,6 +346,105 @@ nav ul li:first-child:hover a {
   height: 50px;
 }
 
+/* CONOCIMIENTOS */
+.conocimientos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* border: 3px #08aaff solid; */
+}
+
+.conocimientos .titulo__ {
+  color: red;
+  font-size: 25pt;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.conocimientos_lenguajes {
+  /* width: 300px; */
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  /* flex-direction: row; */
+  gap: 50px;
+  /* border: 3px #08aaff solid; */
+  /* flex-wrap: wrap; */
+  /* align-items: center;
+  justify-content: center; */
+}
+.lenguaje {
+  /* width: auto; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+.lenguaje small {
+  padding: 20px;
+}
+.lenguaje p {
+  padding: 10px;
+}
+.detalle_lenguaje {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.habilidades__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  width: 175px;
+  justify-content: space-between;
+}
+
+.barra,
+.barra::after {
+  position: relative;
+  width: 175px;
+  height: 8px;
+  background-color: #888;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.barra::after {
+  content: "";
+  position: absolute;
+  left: -175px;
+  background-color: blue;
+  transition: 0.2s ease-in-out;
+  animation: llenado__barra 2s ease-in-out forwards;
+}
+.skill_bar--15::after {
+  --skills-bar-length: 15%;
+}
+.skill_bar--20::after {
+  --skills-bar-length: 20%;
+}
+.skill_bar--70::after {
+  --skills-bar-length: 70%;
+}
+.skill_bar--50::after {
+  --skills-bar-length: 50%;
+}
+.skill_bar--30::after {
+  --skills-bar-length: 30%;
+}
+.skill_bar--40::after {
+  --skills-bar-length: 40%;
+}
+@keyframes llenado__barra {
+  to {
+    transform: translateX(var(--skills-bar-length));
+  }
+}
+
+/*                FIN CONOCIMIENTOS             */
+
 /* MEDIA QUERIES PORTADA */
 /* CONFIGURANDO GRID RESPONSIVE */
 
@@ -386,6 +488,7 @@ nav ul li:first-child:hover a {
   .portada .imagenfondo img {
     width: 100%;
     height: 60vh;
+    object-fit: contain;
   }
   .portada .botones .btn1:hover {
     transform: scale(1);
@@ -443,6 +546,7 @@ nav ul li:first-child:hover a {
   .portada .imagenfondo img {
     width: 100%;
     height: 70vh;
+    object-fit: contain;
   }
   .portada .botones .btn1:hover {
     transform: scale(1);
@@ -501,6 +605,7 @@ nav ul li:first-child:hover a {
   .portada .imagenfondo img {
     width: 100%;
     height: 70vh;
+    object-fit: contain;
   }
   .portada .botones .btn1:hover {
     transform: scale(1);
@@ -561,6 +666,7 @@ nav ul li:first-child:hover a {
   .portada .imagenfondo img {
     width: 100%;
     height: 90vh;
+    object-fit: contain;
   }
   .portada .botones .btn1:hover {
     transform: scale(1);
@@ -702,5 +808,104 @@ nav ul li:first-child:hover a {
     /* letter-spacing: 2px; */
     /* line-height: 5px; */
     /* font-size: 13pt; */
+  }
+}
+/* MEDIA QUERIES CONOCIMIENTOS */
+
+@media screen and (max-width: 1000px) {
+  .conocimientos_lenguajes {
+    grid-template-columns: repeat(2, auto);
+  }
+  .conocimientos .titulo__ {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .conocimientos_lenguajes {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .conocimientos_lenguajes {
+    grid-template-columns: repeat(2, auto);
+  }
+  .conocimientos .titulo__ {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .conocimientos_lenguajes {
+    gap: 30px;
+  }
+  .lenguaje {
+    font-size: 15px;
+  }
+  .habilidades__header {
+    width: 100px;
+  }
+
+  .barra,
+  .barra::after {
+    position: relative;
+    width: 100px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .barra::after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    background-color: blue;
+    transition: 0.2s ease-in-out;
+    animation: llenado__barra 2s ease-in-out forwards;
+  }
+}
+@media screen and (max-width: 480px) {
+  .conocimientos_lenguajes {
+    grid-template-columns: repeat(1, auto);
+  }
+  .conocimientos .titulo__ {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+  }
+  .conocimientos_lenguajes {
+    gap: 5px;
+  }
+  .lenguaje {
+    font-size: 15px;
+  }
+  .habilidades__header {
+    width: 100px;
+  }
+
+  .barra,
+  .barra::after {
+    position: relative;
+    width: 100px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .barra::after {
+    content: "";
+    position: absolute;
+    left: -100px;
+    background-color: blue;
+    transition: 0.2s ease-in-out;
+    animation: llenado__barra 2s ease-in-out forwards;
+  }
+  .lenguaje small {
+    padding: 10px;
+  }
+  .lenguaje p {
+    padding: 5px;
+  }
+  .lenguaje img {
+    width: 40px;
+    height: 40px;
   }
 }
