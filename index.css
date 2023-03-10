@@ -1036,7 +1036,7 @@ nav ul li:first-child:hover a {
   .card {
     position: relative;
     height: auto;
-    width: 70%;
+    width: 80%;
     /* height: 430px; */
     padding: 5px;
     margin: 5px;
@@ -1045,7 +1045,9 @@ nav ul li:first-child:hover a {
     /* position: relative; */
     gap: 5px;
     top: 0px;
-    margin-top: 600px;
+    left: 0;
+    transform: none;
+    margin-top: 100px;
   }
   .cover__card {
     height: 100px;
