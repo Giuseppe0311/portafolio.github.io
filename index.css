@@ -3,12 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --skills-bar-length: 0%;
 }
 body {
   display: flex;
   flex-direction: column;
+}
+.container__menu {
+  /* background-color: whitesmoke; */
+  /* height: 15vh; */
+  display: block;
+  /* position: static; */
+  position: fixed;
+  top: 0px;
+  z-index: 1001;
+}
+.container__menu.black {
+  background-color: rgb(8, 170, 255, 0.8);
 }
 /* variables */
 :root {
@@ -21,7 +36,7 @@ header {
 .container__menu {
   width: 100%;
   height: 70px;
-  background-color: #08aaff;
+  background-color: rgb(8, 170, 255);
   padding: 0px 20px;
 }
 .menu {
@@ -530,7 +545,64 @@ nav ul li:first-child:hover a {
 /* PRUEBA CONTAINER CARD */
 
 /* FIN MIS PROYECTOS */
-
+/* CONFIGURANDO CONTACTOS */
+footer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.container__formulario {
+  position: relative;
+  width: 100%;
+  position: relative;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detalle_titulo {
+  font-size: 14pt;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.contactos__titulo {
+  color: red;
+  font-size: 40pt;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.formulario form {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.formulario input {
+  width: 100%;
+  border: 3px #08aaff solid;
+  margin: 1%;
+  font-size: 10pt;
+  padding: 1%;
+}
+.formulario textarea {
+  width: 100%;
+  border: 3px #08aaff solid;
+  margin: 1%;
+  font-size: 10pt;
+  padding: 1%;
+}
+.formulario form button {
+  padding: 2%;
+  background-color: #08aaff;
+  font-size: 10pt;
+  color: white;
+  transition: all 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+/* FIN CONTACTOS */
 /* MEDIA QUERIES PORTADA */
 /* CONFIGURANDO GRID RESPONSIVE */
 
@@ -1033,6 +1105,9 @@ nav ul li:first-child:hover a {
   }
 }
 @media (max-width: 650px) {
+  .misproyectos {
+    height: auto;
+  }
   .card {
     position: relative;
     height: auto;
@@ -1052,5 +1127,13 @@ nav ul li:first-child:hover a {
   .cover__card {
     height: 100px;
     margin-bottom: 5px;
+  }
+  .contactos__titulo {
+    font-size: 30pt;
+  }
+  .container__formulario {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
 }

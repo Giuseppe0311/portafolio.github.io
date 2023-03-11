@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $(".container__menu").addClass("black");
+        } else {
+          $(".container__menu").removeClass("black");
+        }
+      });
+    </script>
     <script
       src="https://kit.fontawesome.com/b1d1afb1da.js"
       crossorigin="anonymous"
@@ -21,18 +31,17 @@
           </label>
           <nav>
             <ul class="nav-links">
-              <li><a id="selected" href="#"></a></li>
-              <li><a href="#">SOBRE MI</a></li>
-              <li><a href="#">CONOCIMIENTOS</a></li>
-              <li><a href="#">PROYECTOS</a></li>
-              <li><a href="#">CURRICULUM</a></li>
-              <li><a href="#">CONTÁCTOS</a></li>
+              <li><a id="selected" href="index.html#slideportada"></a></li>
+              <li><a href="index.html#slidesobremi">SOBRE MI</a></li>
+              <li><a href="index.html#slideconocimientos">CONOCIMIENTOS</a></li>
+              <li><a href="index.html#slideproyectos">PROYECTOS</a></li>
+              <li><a href="index.html#slidecontactos">CONTÁCTOS</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <div class="portada">
+    <div class="portada" id="slideportada">
       <div class="miinformacion">
         <div class="presentacion">
           <p class="txt1">HOLA,SOY</p>
@@ -48,7 +57,7 @@
           <!-- <img src="..//IMAGES/SQL_LOGO.png" alt="sql" /> -->
         </div>
         <div class="botones">
-          <a href="#" class="btn1">CONTACTAME AQUI</a>
+          <a href="#" class="btn1">CURRICULUM AQUI</a>
 
           <a href="#" class="btn2">MIRA MIS TRABAJOS</a>
         </div>
@@ -57,7 +66,7 @@
         <img src="PORTADA-1.png" alt="logo" />
       </div>
     </div>
-    <div class="sobremi">
+    <div class="sobremi" id="slidesobremi">
       <div class="acercamio">
         <div class="presentacionn">
           <h2>SOBRE MI</h2>
@@ -97,7 +106,7 @@
       </div> -->
     </div>
     <!-- INICIO CONOCIMIENTOS -->
-    <div class="conocimientos">
+    <div class="conocimientos" id="slideconocimientos">
       <div class="contenedor_conocimientos">
         <h2 class="titulo__">CONOCIMIENTOS</h2>
         <div class="conocimientos_lenguajes">
@@ -180,7 +189,7 @@
       </div>
     </div>
     <!-- FIN CONOCIMIENTOS -->
-    <div class="misproyectos">
+    <div class="misproyectos" id="slideproyectos">
       <div class="container__cards">
         <div class="card">
           <div class="cover__card">
@@ -223,5 +232,38 @@
         </div>
       </div>
     </div>
+    <footer class="piedepagina" id="slidecontactos">
+      <section class="container__formulario">
+        <h2 class="contactos__titulo">CONTACTOS</h2>
+        <p class="detalle_titulo">
+          Si te ha gustado lo que has visto y tienes proyectos en mente, no
+          dudes en contactarte conmigo
+        </p>
+        <section class="formulario">
+          <form action="" method="get">
+            <input
+              type="text"
+              id="Namelastname"
+              placeholder="Su Nombre y Apellido"
+            />
+            <input type="email" id="email" placeholder="Su Email" />
+            <input
+              type="text"
+              id="ciudad"
+              placeholder="Su ciudad de residencia"
+            />
+
+            <textarea
+              name="Mensaje"
+              id="Mensaje"
+              cols="30"
+              rows="10"
+              placeholder="Mensaje"
+            ></textarea>
+            <button class="enviar" type="submit">Enviar</button>
+          </form>
+        </section>
+      </section>
+    </footer>
   </body>
 </html>
