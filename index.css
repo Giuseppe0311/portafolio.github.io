@@ -120,7 +120,7 @@ nav ul li:first-child:hover a {
     background-color: #023877;
     position: fixed;
     left: 0;
-    top: 10vh;
+    top: 70px;
     width: 100%;
     height: 0px;
     transition: all 300ms ease;
