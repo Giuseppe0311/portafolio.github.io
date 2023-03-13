@@ -398,6 +398,9 @@ nav ul li:first-child:hover a {
   .fotologo img {
     animation: none;
   }
+  .presentacion {
+    margin-top: 2rem;
+  }
 }
 @media screen and (min-width: 720px) and (max-width: 900px) {
   .acercamio {
