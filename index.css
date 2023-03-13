@@ -427,6 +427,8 @@ nav ul li:first-child:hover a {
 /* CONOCIMIENTOS */
 .conocimientos {
   display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -437,7 +439,7 @@ nav ul li:first-child:hover a {
 .conocimientos .titulo__ {
   color: red;
   font-size: 1.5em;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
   text-align: center;
 }
 .conocimientos_lenguajes {
@@ -520,7 +522,7 @@ nav ul li:first-child:hover a {
     grid-template-columns: repeat(2, auto);
   }
   .conocimientos .titulo__ {
-    margin-top: 1.5em;
+    margin-top: 4.5em;
   }
   .conocimientos_lenguajes {
     gap: 1em;
