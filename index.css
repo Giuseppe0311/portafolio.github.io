@@ -366,6 +366,7 @@ nav ul li:first-child:hover a {
 
 .presentacionn p {
   width: 100%;
+  text-align: center;
 }
 
 .presentacionn h2 {
@@ -393,7 +394,7 @@ nav ul li:first-child:hover a {
   .acercamio {
     font-size: 18px;
     padding-right: 40px;
-    min-width: 280px;
+    min-width: 300px;
     margin-right: 0px;
   }
   .sobremi {
@@ -694,3 +695,15 @@ button:hover {
 /* FIN CONTACTOS */
 /* MEDIA QUERIES PORTADA */
 /* CONFIGURANDO GRID RESPONSIVE */
+@media only screen and (orientation: landscape) {
+  /* Aquí van las reglas de estilo para dispositivos con orientación horizontal */
+  .portada {
+    min-height: auto;
+  }
+  .sobremi {
+    min-height: auto;
+  }
+  .fotologo img {
+    animation: none;
+  }
+}
