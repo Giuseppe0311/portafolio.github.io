@@ -395,6 +395,9 @@ nav ul li:first-child:hover a {
   .acercamio {
     margin-top: 3rem;
   }
+  .fotologo img {
+    animation: none;
+  }
 }
 @media screen and (min-width: 720px) and (max-width: 900px) {
   .acercamio {
