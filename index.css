@@ -384,6 +384,14 @@ nav ul li:first-child:hover a {
   max-width: 25.6rem;
   animation: movimiento 2.5s linear infinite;
 }
+@media (max-width: 1278px) {
+  .portada {
+    min-height: auto;
+  }
+  .sobremi {
+    min-height: auto;
+  }
+}
 @media screen and (min-width: 720px) and (max-width: 900px) {
   .acercamio {
     font-size: 13px;
@@ -695,15 +703,14 @@ button:hover {
 /* FIN CONTACTOS */
 /* MEDIA QUERIES PORTADA */
 /* CONFIGURANDO GRID RESPONSIVE */
-@media only screen and (orientation: landscape) {
-  /* Aquí van las reglas de estilo para dispositivos con orientación horizontal */
+
+/*   */
+
+/* @media only screen and (orientation: portrait) {
   .portada {
     min-height: auto;
   }
   .sobremi {
     min-height: auto;
   }
-  .fotologo img {
-    animation: none;
-  }
-}
+} */
