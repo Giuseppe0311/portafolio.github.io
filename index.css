@@ -436,6 +436,9 @@ nav ul li:first-child:hover a {
   min-height: 100vh;
   font-size: 20px;
 }
+.contenedor_conocimientos {
+  margin-bottom: 1em;
+}
 
 .conocimientos .titulo__ {
   color: red;
