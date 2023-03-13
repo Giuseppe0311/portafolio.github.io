@@ -354,7 +354,7 @@ nav ul li:first-child:hover a {
 }
 .acercamio h2 {
   color: red;
-  font-size: 2rem;
+  font-size: 2em;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
 }
@@ -381,54 +381,9 @@ nav ul li:first-child:hover a {
 }
 .fotologo img {
   width: 100%;
-  min-width: 17.5rem;
-  max-width: 25.6rem;
+  min-width: 17.5em;
+  max-width: 25em;
   animation: movimiento 2.5s linear infinite;
-}
-@media (max-width: 1278px) {
-  .portada {
-    min-height: auto;
-  }
-  .sobremi {
-    min-height: auto;
-  }
-  .acercamio {
-    margin-top: 3rem;
-  }
-  .fotologo img {
-    animation: none;
-  }
-  .presentacion {
-    margin-top: 2rem;
-  }
-}
-@media screen and (min-width: 720px) and (max-width: 900px) {
-  .acercamio {
-    font-size: 13px;
-    /* gap: 3em; */
-  }
-}
-@media screen and (min-width: 320px) and (max-width: 720px) {
-  .acercamio {
-    font-size: 18px;
-    padding-right: 40px;
-    min-width: 300px;
-    margin-right: 0px;
-  }
-  .sobremi {
-    flex-direction: column-reverse;
-  }
-  .fotologo {
-    display: flex;
-    justify-content: center;
-  }
-  .fotologo img {
-    min-width: 10.6rem;
-    max-width: 10.6rem;
-  }
-  /* .acercamio h2 {
-    font-size: 0.8rem;
-  } */
 }
 
 /* @media (min-width: 375px) {
@@ -475,34 +430,26 @@ nav ul li:first-child:hover a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  /* border: 3px #08aaff solid; */
+  min-height: 100vh;
+  font-size: 20px;
 }
 
 .conocimientos .titulo__ {
   color: red;
-  font-size: 25pt;
-  margin-bottom: 80px;
+  font-size: 1.5em;
+  margin-bottom: 2.5em;
   text-align: center;
 }
 .conocimientos_lenguajes {
-  /* width: 300px; */
   display: grid;
   grid-template-columns: auto auto auto;
-
-  /* flex-direction: row; */
-  gap: 50px;
-  /* border: 3px #08aaff solid; */
-  /* flex-wrap: wrap; */
-  /* align-items: center;
-  justify-content: center; */
+  gap: 2.5em;
 }
 .lenguaje {
-  /* width: auto; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  font-size: 20px;
+  font-size: 1em;
 }
 .lenguaje small {
   padding: 20px;
@@ -521,14 +468,14 @@ nav ul li:first-child:hover a {
   flex-direction: row;
   align-items: center;
   margin-left: auto;
-  width: 175px;
+  width: 8.75em;
   justify-content: space-between;
 }
 
 .barra,
 .barra::after {
   position: relative;
-  width: 175px;
+  width: 8.75em;
   height: 8px;
   background-color: #888;
   border-radius: 3px;
@@ -537,7 +484,7 @@ nav ul li:first-child:hover a {
 .barra::after {
   content: "";
   position: absolute;
-  left: -175px;
+  left: -8.75em;
   background-color: blue;
   transition: 0.2s ease-in-out;
   animation: llenado__barra 2s ease-in-out forwards;
@@ -567,7 +514,31 @@ nav ul li:first-child:hover a {
 }
 
 /*                FIN CONOCIMIENTOS             */
+/* CONFIGURANDO GRID */
+@media screen and (max-width: 1025px) {
+  .conocimientos_lenguajes {
+    grid-template-columns: repeat(2, auto);
+  }
+  .conocimientos .titulo__ {
+    margin-top: 1.5em;
+  }
+  .conocimientos_lenguajes {
+    gap: 1em;
+  }
+}
 
+@media screen and (max-width: 660px) {
+  .conocimientos_lenguajes {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media screen and (max-width: 370px) {
+  .conocimientos {
+    font-size: 17px;
+  }
+}
+
+/* FIN CONFIGURACION GRID */
 /* CONFIGURANDO MIS PROYECTOS  */
 .misproyectos {
   height: 100vh;
@@ -724,3 +695,54 @@ button:hover {
     min-height: auto;
   }
 } */
+@media (max-width: 1278px) {
+  .portada {
+    min-height: auto;
+  }
+  .sobremi {
+    min-height: auto;
+  }
+  .acercamio {
+    margin-top: 3em;
+  }
+  .fotologo img {
+    animation: none;
+  }
+  .presentacion {
+    margin-top: 2em;
+  }
+  .conocimientos {
+    min-height: auto;
+  }
+  .contenedor_conocimientos {
+    margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 900px) {
+  .acercamio {
+    font-size: 18px;
+    /* gap: 3em; */
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .acercamio {
+    font-size: 18px;
+    padding-right: 40px;
+    min-width: 300px;
+    margin-right: 0px;
+  }
+  .sobremi {
+    flex-direction: column-reverse;
+  }
+  .fotologo {
+    display: flex;
+    justify-content: center;
+  }
+  .fotologo img {
+    min-width: 10.6em;
+    max-width: 10.6em;
+  }
+  /* .acercamio h2 {
+    font-size: 0.8rem;
+  } */
+}
